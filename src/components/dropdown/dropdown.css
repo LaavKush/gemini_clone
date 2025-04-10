@@ -1,0 +1,173 @@
+/* ===== DARK MODE BASE STYLING ===== */
+body.dark-mode {
+  background-color: rgb(38, 37, 37);
+  color: #ffffff;
+}
+/* body.dark-mode .sidebar *{
+  background-color: rgb(50, 50, 50);
+  color: white;
+} */
+
+
+body.dark-mode .navbar,
+body.dark-mode .card,
+body.dark-mode .sidebar,
+body.dark-mode .dropdown,
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  border-color: #444;
+}
+
+body.dark-mode .card {
+  background-color: #222;
+  color: white;
+}
+
+body.dark-mode .card:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-10px) rotate(-1deg);
+}
+
+
+body.dark-mode .new-chat,
+body.dark-mode .search-box {
+  background-color: rgb(24, 24, 24);
+  color: white;
+  border-color: #555;
+}
+
+body.dark-mode .main .card:hover {
+  background-color:rgb(33, 33, 33);
+  /* transform: scale(1.5); Slight zoom-in */
+  z-index: 1; /* Optional: in case cards overlap */
+  border-radius: 20%;
+}
+
+body.dark-mode input {
+  background-color: rgb(24, 24, 24);  /* dark background */
+  color: #fff;             /* white text */
+ 
+}
+
+body.dark-mode .sidebar p,
+body.dark-mode .main p
+
+{
+  color: white !important;
+
+}
+
+/* ===== DARK MODE DROPDOWN ITEM STYLING ===== */
+body.dark-mode .dropdown-item span,
+body.dark-mode .dropdown-item .icon,
+body.dark-mode .dropdown-item .icon-toggle-label {
+  color: #ffffff !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: #333 !important;
+}
+
+/* ===== DROPDOWN WRAPPER ===== */
+.dropdown-wrapper {
+  position: absolute;
+  top: -85px;
+  left: 100%;
+  transform: translateX(10px);
+  z-index: 999;
+}
+
+/* ===== DROPDOWN BASE ===== */
+.dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 999;
+  width: 200px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Override in dark mode */
+body.dark-mode .dropdown {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+/* ===== DROPDOWN ITEM ===== */
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 6px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  color: inherit;
+}
+
+.dropdown-item span {
+  flex: 1;
+  text-align: left;
+  color: inherit;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===== ICON ===== */
+.icon {
+  margin-right: 8px;
+  min-width: 20px;
+  color: inherit;
+}
+
+/* ===== TOGGLE SWITCH ===== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
