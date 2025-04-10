@@ -1,6 +1,6 @@
 // Dropdown.jsx
 import React, { useContext } from "react";
-import "./Dropdown.css";
+import "./dropdown.css";
 import { FaUser, FaStar, FaLink } from "react-icons/fa";
 import { Context } from "../../Context/Context";
 
